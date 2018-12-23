@@ -1,5 +1,8 @@
 package math.problems;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
@@ -13,6 +16,39 @@ public class PrimeNumber {
 		 *
 		 */
 
+
+		int start = 2;
+int total=0;
+		int end = 1000000;
+		System.out.println("List of prime numbers between " + start + " and " + end);
+
+
+		for (int i = start; i <= end; i++) {
+			if (isPrime(i)) {
+				System.out.println(i);
+//				total =  i;
+//				List<Integer> integerArrayList = Arrays.asList(i);
+//				System.out.println(integerArrayList);
+
+			}
+		}
 	}
 
-}
+		public static  boolean isPrime ( int n){
+			if (n <= 1) {
+				return false;
+			}
+			for (int i = 2; i <= Math.sqrt(n); i++) {
+				if (n % i == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+
+
+
+
+
+
