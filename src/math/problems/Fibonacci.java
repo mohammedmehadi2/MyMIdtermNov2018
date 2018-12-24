@@ -1,5 +1,6 @@
 package math.problems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Fibonacci {
@@ -7,18 +8,28 @@ public class Fibonacci {
          /*
           Write 40 Fibonacci numbers with java.
          */
-        int [] q = new int[40];
 
-        for (int i = 0;i <40; i ++){
+        System.out.println(fibonaccimethod());
+    }
 
-            if (i <2){
 
-                q[i]=i;}
-            else {
-                q[i]=q[i-2] + q [i -1] ;
+
+    public static ArrayList<Integer> fibonaccimethod() {
+        int[] fibo = new int[40];
+        ArrayList<Integer> arr = new ArrayList<>();
+
+
+        for (int i = 0; i < 20; i++) {
+
+            if (i < 2) {
+
+                fibo[i] = i;
+                arr.add(fibo[i]);
+
+            } else {
+                fibo[i] = fibo[i - 2] + fibo[i - 1];
+                arr.add(fibo[i]);
             }
-        }
-        System.out.println("40 Fibonacci numbers : "+Arrays.toString(q));
-
+        }return arr;
     }
 }
