@@ -1,5 +1,8 @@
 package string.problems;
 
+import java.util.HashMap;
+import java.util.Set;
+
 /**
  * Created by mrahman on 04/22/17.
  */
@@ -13,6 +16,10 @@ public class DuplicateWord {
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
 
+
     }
 
-}
+
+
+
+        }
