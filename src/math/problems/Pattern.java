@@ -8,7 +8,24 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		int q = 1;
+		int	w = 0;
+		int n = 100;
+
+		int[] array1 = new int[40];
+		System.out.print("The pattern output is shown : ");
+
+		while (n > 0) {
+			for (int i = 0; i < 10; i++) {
+				System.out.print(n);
+				System.out.print(" ");
+				array1[w] = n;
+				n = n-q;
+				w++;
+
+			}
+			q++;
+		}
 
 
 	}

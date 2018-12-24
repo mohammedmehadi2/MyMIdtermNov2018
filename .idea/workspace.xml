@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2d3d788-a60a-4122-a4f4-0a3d6a670fad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MidtermNovember2018/math/problems/FindLowestDifference.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MidtermNovember2018/math/problems/FindLowestDifference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MidtermNovember2018/math/problems/UnitTestingMath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MidtermNovember2018/math/problems/UnitTestingMath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/problems/FindLowestDifference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/problems/FindLowestDifference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/problems/FindMissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/problems/FindMissingNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/problems/Pattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/problems/Pattern.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/problems/UnitTestingMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/problems/UnitTestingMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/problems/DetermineLargestWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/problems/DetermineLargestWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/string/problems/UnitTestingStringProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/string/problems/UnitTestingStringProblem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,53 +17,41 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/problems/PrimeNumber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#589#598#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/databases/ConnectToSqlDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="146" column="111" selection-start-line="146" selection-start-column="111" selection-end-line="146" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/problems/LowestNumber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/problems/FindLowestDifference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/string/problems/Anagram.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/string/problems/UnitTestingStringProblem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="66" lean-forward="true" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/string/problems/DetermineLargestWord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#612#629#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/math/problems/Pattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -82,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/math/problems/UnitTestingMath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,10 +128,13 @@
         <option value="$PROJECT_DIR$/src/math/problems/FindLowestDifference.java" />
         <option value="$PROJECT_DIR$/src/math/problems/FindMissingNumber.java" />
         <option value="$PROJECT_DIR$/src/math/problems/UnitTestingMath.java" />
+        <option value="$PROJECT_DIR$/src/string/problems/UnitTestingStringProblem.java" />
+        <option value="$PROJECT_DIR$/src/math/problems/Pattern.java" />
+        <option value="$PROJECT_DIR$/src/string/problems/DetermineLargestWord.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="30" />
     <option name="y" value="23" />
     <option name="width" value="1645" />
@@ -183,7 +172,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545666819924" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545677922043" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -201,13 +190,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UnitTestingMath">
-    <configuration name="Factorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="math.problems.Factorial" />
+  <component name="RunManager" selected="Application.DetermineLargestWord">
+    <configuration name="Anagram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="string.problems.Anagram" />
       <module name="MidtermNovember2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="math.problems.*" />
+          <option name="PATTERN" value="string.problems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,12 +204,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="math.problems.Fibonacci" />
+    <configuration name="DetermineLargestWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="string.problems.DetermineLargestWord" />
       <module name="MidtermNovember2018" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="math.problems.*" />
+          <option name="PATTERN" value="string.problems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,21 +217,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindLowestDifference" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="math.problems.FindLowestDifference" />
-      <module name="MidtermNovember2018" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="math.problems.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindMissingNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="math.problems.FindMissingNumber" />
+    <configuration name="Pattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="math.problems.Pattern" />
       <module name="MidtermNovember2018" />
       <extension name="coverage">
         <pattern>
@@ -267,13 +243,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UnitTestingStringProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="string.problems.UnitTestingStringProblem" />
+      <module name="MidtermNovember2018" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="string.problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DetermineLargestWord" />
+        <item itemvalue="Application.Pattern" />
+        <item itemvalue="Application.UnitTestingStringProblem" />
+        <item itemvalue="Application.Anagram" />
         <item itemvalue="Application.UnitTestingMath" />
-        <item itemvalue="Application.FindMissingNumber" />
-        <item itemvalue="Application.FindLowestDifference" />
-        <item itemvalue="Application.Fibonacci" />
-        <item itemvalue="Application.Factorial" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +280,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="23" width="1645" height="983" extended-state="1" />
+    <frame x="30" y="23" width="1645" height="983" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -299,7 +288,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24953213" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30567685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32884398" />
       <window_info anchor="bottom" id="Version Control" />
@@ -307,7 +296,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32996634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32996634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/problems/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/secret.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -392,28 +374,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/string/problems/Anagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/databases/ConnectToSqlDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="146" column="111" selection-start-line="146" selection-start-column="111" selection-end-line="146" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/problems/PrimeNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#589#598#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -465,12 +429,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/problems/UnitTestingMath.java">
+    <entry file="file://$PROJECT_DIR$/src/math/problems/PrimeNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="59">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#589#598#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/problems/UnitTestingMath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/string/problems/Anagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/string/problems/UnitTestingStringProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="66" lean-forward="true" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/problems/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/string/problems/DetermineLargestWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#612#629#0" expanded="true" />
           </folding>
         </state>
       </provider>
