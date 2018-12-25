@@ -16,7 +16,8 @@ public class Permutation {
          * Write Java program to compute all Permutation of a String
          *
          */
-        generatePermutation("abc",0,3);
+        System.out.println(generatePermutation("abc",0,3));
+
     }
     public static String swapString(String a, int i, int j) {
         char[] b =a.toCharArray();
@@ -25,12 +26,13 @@ public class Permutation {
         b[i] = b[j];
         b[j] = ch;
         return String.valueOf(b);
-    }
-    public static void generatePermutation(String str, int start, int end)
+    }static String  q = "";
+    public static String generatePermutation(String str, int start, int end)
     {
 
         if (start == end-1){
-         System.out.println(str);
+
+          q = (q +" "+str);
 
 
         }
@@ -47,7 +49,7 @@ public class Permutation {
 
             }
         }
-    }
+   return q; }
 }
 
 

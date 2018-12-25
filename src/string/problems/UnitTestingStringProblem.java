@@ -16,7 +16,12 @@ public class UnitTestingStringProblem {
             System.out.println("Unit test for anagram is failed");
         }
 
-
+String expected = " abc acb bac bca cba cab";
+        try{Assert.assertEquals(Permutation.generatePermutation("abc",0,3),expected);{
+            System.out.println("Unit test for Permutation is passed");}
+        }catch (Exception e){
+            System.out.println("Unit test for permutation is failed ");
+        }
 
     }
 

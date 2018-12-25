@@ -1,7 +1,9 @@
 package databases;
 
+import com.sun.org.apache.xpath.internal.operations.Variable;
 import parser.Student;
 
+import javax.lang.model.element.VariableElement;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -111,9 +113,15 @@ public class ConnectToSqlDB {
     {
         try {
             connectToSqlDatabase();
-            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
-            ps.setString(1,ArrayData);
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
             ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName+"` varchar(2500) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps.executeUpdate();
+            //for(int n=0; n<ArrayData.length(); n++){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setString(1, String.valueOf(ArrayData));
+                ps.executeUpdate();
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {
