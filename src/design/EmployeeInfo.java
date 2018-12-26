@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends EmployeeAbstractclass{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,24 +20,43 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
+	final static String companyName = "MyFutureBiggestCompany";
+	private int employeeid;
+	String employeename;
+	int salary;
+	int employeeage ;
+
+
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
 	 */
+
 	
 	/*
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		this.employeeid=employeeId;
+
 		
 	}
     public EmployeeInfo(String name, int employeeId){
+
+		this.employeename=name;
+		this.employeeid=employeeId;
 		
 	}
+	public EmployeeInfo(String name, int employeeId, int employeeage){
+
+		this.employeename=name;
+		this.employeeid=employeeId;
+		this.employeeage=employeeage;
+	}
+	public EmployeeInfo(){};   //Declaring default constructor
 	
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -47,8 +66,14 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
+	public static double calculateEmployeeBonus(int salary, int performance){
+		double total=0;
+		if(performance >= 8){
+			total = salary * .1;
+		}else{
+			total= salary*.08;
+		}
+		System.out.println("Employee's bonus = $"+total);
 		return total;
 	}
 	
@@ -58,21 +83,81 @@ public class EmployeeInfo {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
-		int total=0;
-		Scanner sc  = new Scanner(System.in);
-		System.out.println("Please enter start date in format (example: May,2015): ");
-		String joiningDate = sc.nextLine();
-		System.out.println("Please enter today's date in format (example: August,2017): ");
-		String todaysDate = sc.nextLine();
-        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+	public static double calculateEmployeePension(int sal){
+		double total=0;
+		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Please enter start date in format (example: May,2015): ");
+			String joiningDate = sc.nextLine();
+			System.out.println("Please enter today's date in format (example: August,2017): ");
+			String todaysDate = sc.nextLine();
+			String convertedJoiningDate = DateConversion.convertDate(joiningDate);
+			String convertedTodaysDate = DateConversion.convertDate(todaysDate);
 
-        //implement numbers of year from above two dates
-		//Calculate pension
+			//implement numbers of year from above two dates
+			String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4);
+			String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4);
+			//Calculate pension
+			int start = Integer.parseInt(startYear);
+			int current = Integer.parseInt(currentYear);
+			if ((current - start) == 1) {
+				total = sal * .05;
+			} else if ((current - start) >= 2) {
+				total = sal * .1;
+			} else if ((current - start) <= 1) {
+				total = 0;
+			}
+		}catch (IllegalArgumentException e){
+			System.out.println("your input is not in correct format.To use this calculator run again");}
+
+		System.out.println("Employee Pension is = $ " + total);
 
 		return total;
 	}
+
+	@Override
+	public int employeeage() {
+		return employeeage;
+	}
+
+	@Override
+	public int employeeId() {
+		return employeeid;
+	}
+
+	@Override
+	public String employeeName() {
+		return employeename;
+	}
+
+	@Override
+	public void assignDepartment() {
+if (employeeage >28){
+	System.out.println("He is in Senior department");
+	}else {
+	System.out.println("He is in junior department");
+}}
+
+	@Override
+	public int calculateSalary() {
+		return 0;
+	}
+
+	@Override
+	public void benefitLayout() {
+
+	}
+	public void setName(String name) {
+		this.employeename = name;
+	}
+	public void setEmployeeID(int employeeID) {
+		this.employeeid = employeeID;
+	}
+	public void setEmployeeAge(int employeeAge) {
+		this.employeeage = employeeAge;
+	}
+
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

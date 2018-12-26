@@ -5,6 +5,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import design.EmployeeInfo;
 import org.bson.Document;
 import parser.Student;
 
@@ -53,6 +54,42 @@ public class ConnectToMongoDB {
             collection.insertOne(document);
         }
         return  "Student has been registered";
+    }
+    public String insertIntoMongoDBforemp(List<EmployeeInfo> emp, String profileName){
+        MongoDatabase mongoDatabase = connectToMongoDB();
+        MongoCollection myCollection = mongoDatabase.getCollection(profileName);
+        boolean collectionExists = mongoDatabase.listCollectionNames()
+                .into(new ArrayList<String>()).contains(profileName);
+        if(collectionExists) {
+            myCollection.drop();
+        }
+        for(int i=0; i<emp.size(); i++){
+            MongoCollection<Document> collection = mongoDatabase.getCollection(profileName);
+            Document document = new Document().append("name", emp.get(i).employeeName()).append("Id",
+                    emp.get(i).employeeId()).append("age",emp.get(i).employeeage());
+            collection.insertOne(document);
+        }
+        return  "Employee has been registered";
+    }
+    public  List<EmployeeInfo> readEmployeeListFromMongoDB(String profileName){
+        List<EmployeeInfo> list = new ArrayList<EmployeeInfo>();
+        EmployeeInfo emp = new EmployeeInfo();
+        MongoDatabase mongoDatabase = connectToMongoDB();
+        MongoCollection<Document> collection = mongoDatabase.getCollection(profileName);
+        BasicDBObject basicDBObject = new BasicDBObject();
+        FindIterable<Document> iterable = collection.find(basicDBObject);
+        for(Document doc:iterable){
+            String Name = (String)doc.get("name");
+            emp.setName(Name);
+           // int  id = (Integer) doc.get("id");
+           // emp.setEmployeeID(id);
+            int age = (Integer) doc.get("age");
+            emp.setEmployeeAge(age);
+
+            emp = new EmployeeInfo(emp.employeeName(),emp.employeeId(), emp.employeeage());
+            list.add(emp);
+        }
+        return list;
     }
 
     public  List<User> readUserProfileFromMongoDB(){
