@@ -42,7 +42,7 @@ public class ProcessStudentInfo {
 				String tag = "id";
                 //Create ConnectToSqlDB Object
 				ConnectToSqlDB con = new ConnectToSqlDB();
-				//ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
+				ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
 				//Declare a Map with List<String> into it.
 				Map<String,List<Student>> list = new LinkedHashMap<String,List<Student>>();
 				
@@ -76,27 +76,34 @@ public class ProcessStudentInfo {
 
 
 				//Store Qtp data into Qtp table in Database
-				//connectToMongoDB.insertIntoMongoDB(seleniumStudents,"qtp");
-				//connectToSqlDB.insertDataFromArrayListToMySql(seleniumStudents, "qtp","studentList");
-				List lst = seleniumStudents;
-				con.insertDataFromArrayListToSqlTable(lst,"tbl_SeleniumXml","clm_SeleniumXml");
-				//Store Selenium data into Selenium table in Database
+				connectToMongoDB.insertIntoMongoDB(qtpStudents,"qtp");
+				//List lstqtp = qtpStudents;
+				//con.insertDataFromArrayListToSqlTable(lstqtp, "qtp","studentList");
 
+				//Store Selenium data into Selenium table in Database
+				connectToMongoDB.insertIntoMongoDB(seleniumStudents,"slm");
+				//List lst = seleniumStudents;
+
+				//con.insertDataFromArrayListToSqlTable(lst,"tbl_SeleniumXml","clm_SeleniumXml");
 				//Retrieve Qtp students from Database
-//               List<Student> stList = connectToMongoDB.readStudentListFromMongoDB("qtp");
-//               for(Student st:stList){
-//               	  System.out.println(st.getFirstName()+" "+st.getLastName()+" "+st.getScore()+" "+st.getId());
-//			   }
+               List<Student> stList = connectToMongoDB.readStudentListFromMongoDB("qtp");
+              for(Student st:stList){
+             	  System.out.println("Studentid(id = "+st.getId()+")"+st.getFirstName()+" "+st.getLastName()+" "+st.getScore());
+			   }
 
 			   //Retrieve Selenium students from Database
-				List<String> stlist2 = con.readDataBase("tbl_SeleniumXml","clm_SeleniumXml");
-               for(String s : stlist2){
+				List<Student> stList1 = connectToMongoDB.readStudentListFromMongoDB("slm");
+				for(Student st:stList1){
+					System.out.println("Studentid(id = "+st.getId()+")"+st.getFirstName()+" "+st.getLastName()+" "+st.getScore());
+				}
+				//List<String> stlist2 = con.readDataBase("tbl_SeleniumXml","clm_SeleniumXml");
+               //for(String s : stlist2){
 
-               	System.out.println(s);
+               	//System.out.println(s);
 				   }
 			   }
 
 
-			}
+			
 
 
