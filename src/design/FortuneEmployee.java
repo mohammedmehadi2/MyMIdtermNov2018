@@ -142,7 +142,7 @@ public class FortuneEmployee {
 
 		List<EmployeeInfo> emp = mon.readEmployeeListFromMongoDB("List of fortune Employee");
 		for (EmployeeInfo person : emp) {
-			System.out.println(person.employeeName() + " " + person.employeeage());
+			System.out.println(person.employeeName() + " " +person.employeeage());
 
 
 		}

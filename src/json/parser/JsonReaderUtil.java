@@ -1,3 +1,4 @@
+
 package json.parser;
 
 import com.google.gson.JsonArray;
@@ -18,9 +19,7 @@ public class JsonReaderUtil {
 
     /*
       ToDo:API is given, This Rest API will give you a Json Array. It is parsed partially. Your task is to give the following output.
-
       output:
-
      "mrahman@gmail.com" "Matiur Rahman" "400k" "Finance"
      "mrahman@gmail.com" "Rohan Rahman" "100k" "Engineering"
      "kafil@gmail.com" "Kafil" "200k" "Backend End Team"
@@ -32,7 +31,6 @@ public class JsonReaderUtil {
      "mrahman2@gmail.com" "Mizanur Rahman" "405k" "Finance"
      "mdtaque@gmail.com" "rifat taque" "400k" "QA"
      "mdtaque@gmail.com" "rifat taque" "400k" "QA"
-
      */
 
     public static void main(String[] args)throws MalformedURLException, IOException {
@@ -53,18 +51,18 @@ public class JsonReaderUtil {
         for (int i = 0; i < jsonArray.size()-1; i++) {
             try {
                 JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
-                //you code start here
-
-
-
-
-
-
+                String empEmail=jsonobject.get("empEmail").toString();
+                String empName =jsonobject.get("empName").toString();
+                String salary=jsonobject.get("salary").toString();
+                String department=jsonobject.get("department").toString();
+                emp=new Employee(empEmail, empName, salary, department);
+                empList.add(emp);
 
             }catch(Exception ex){
 
             }
         }
+
         //Print to the console.
         for(Employee entry:empList){
             System.out.println(entry.getEmpEmail()+" "+entry.getEmpName()+" "+entry.getSalary()+" "+entry.getDepartment());

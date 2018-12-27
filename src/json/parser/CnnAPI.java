@@ -1,18 +1,31 @@
 package json.parser;
 
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import databases.ConnectToMongoDB;
+import parser.Student;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CnnAPI {
     /*
       You can get API_KEY from this below link. Once you have the API_KEY, you can fetch the top-headlines news.
       https://newsapi.org/s/cnn-api
-
       Fetch This following CNN API, It will return some news in Json data. Parse this data and construct
-      https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=YOUR_API_KEY
-
-      MY_API_KEY=0d9e35dfa3c140aab8bf9cdd70df957f
-
+      https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=01502dde174d44e1aa6c1dfa616e967e
+      MY_API_KEY=01502dde174d44e1aa6c1dfa616e967e
       After getting Json Format of the news, You can go to json validator link: https://jsonlint.com/ to see
       how it can be parsed.
-
       "articles": [{
 		"source": {
 			"id": "cnn",
@@ -26,15 +39,65 @@ public class CnnAPI {
 		"publishedAt": "2018-12-23T01:09:50.8583193Z",
 		"content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."
 	   },{}]
-
 	   Read the articles array and construct Headline news as source, author, title,description,url,urlToImage,publishedAt
 	   and content. You need to design News Data Model and construct headline news.
 	   You can store in Map and then into ArrayList as your choice of Data Structure.
-
 	   You can follow How we implemented in Employee and JsonReaderUtil task.
-
 	   Show output of all the headline news in to console.
 	   Store into choice of your database and retrieve.
-
      */
+//My Api key : 677cc1151211446a8ba49aef6127d653
+    public static void main(String[] args) throws MalformedURLException, IOException {
+        String sURL = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=677cc1151211446a8ba49aef6127d653";
+        HelperClass methods = null;
+        List<HelperClass> newsList = new ArrayList<>();
+        URL url = new URL(sURL);
+        URLConnection request = url.openConnection();
+        request.connect();
+        JsonArray jsonArray = null;
+        JsonParser jp = new JsonParser();
+        JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
+        JsonObject xd = new JsonObject();
+        xd.add("articles", root);
+        //Create ConnectToSqlDB Object
+        ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
+
+        jsonArray = new JsonArray();
+        jsonArray.add(root.getAsJsonObject().get("articles"));
+
+
+        for (int i = 0; i < jsonArray.get(0).getAsJsonArray().size(); i++) {
+            try {
+                JsonObject jsonobject = jsonArray.get(0).getAsJsonArray().get(i).getAsJsonObject();
+
+                String source = jsonobject.get("source").getAsJsonObject().get("id").toString();
+                String author = jsonobject.get("author").toString();
+                String title = jsonobject.get("title").toString();
+                String description = jsonobject.get("description").toString();
+                String u = jsonobject.get("url").toString();
+                String urlToImage = jsonobject.get("urlToImage").toString();
+                String publisherAt = jsonobject.get("publishedAt").toString();
+                String content = jsonobject.get("content").toString();
+
+                methods = new HelperClass(source, author, title, description, u, urlToImage, publisherAt, content);
+
+                newsList.add(methods);
+
+            } catch (Exception ex) {
+            }
+        }
+
+        //Print to the console.
+        for (HelperClass entry : newsList) {
+            System.out.println(entry.getSource() + " " + entry.getAuthor() + " " + entry.getTitle() + " " + entry.getDescription() + " " + entry.getUrl() + " " + entry.getUrlToImage() + " " + entry.getPublisherAt() + " " + entry.getContent());
+        }
+
+        connectToMongoDB.newInsertIntoMongoDB(newsList, "CNNApi");
+        // print form data base to console
+        List<HelperClass> st1List = connectToMongoDB.ReadListFromMongoDB1(newsList, "CNNApi");
+        for (HelperClass entry : st1List) {
+            System.out.println(entry.getSource() + " " + entry.getAuthor() + " " + entry.getTitle() + " " + entry.getDescription() + " " + entry.getUrl() + " " + entry.getUrlToImage() + " " + entry.getPublisherAt() + " " + entry.getContent());
+        }
+
+    }
 }

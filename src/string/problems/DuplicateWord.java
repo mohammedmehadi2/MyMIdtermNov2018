@@ -16,6 +16,7 @@ public class DuplicateWord {
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
         System.out.println("Duplicate words are : "+dpliword(st)+"\nThey occur "+occur(st)+" times\nThe avarage length of the words are : "+avg(st));
+
     }
 
     public static Set<String> dpliword(String s) {

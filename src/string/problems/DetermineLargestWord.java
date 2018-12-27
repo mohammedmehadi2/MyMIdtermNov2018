@@ -15,7 +15,7 @@ public class DetermineLargestWord {
         Map<Integer, String> wordNLength = findTheLargestWord(s);
         System.out.println(wordNLength.keySet().iterator().next()+" "+wordNLength.entrySet().stream().findFirst().get().getValue());
 
-
+        System.out.println(findTheLargestWord(s));
     }
 
 
